@@ -13,7 +13,7 @@ namespace Goiztiri.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Plantillas()
         {
             ViewBag.Message = "Your application description page.";
 

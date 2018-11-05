@@ -1,34 +1,47 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   @* <div class="fixed-top">*@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+        <div>
+            <img class="navbar-brand" src="~/Content/img/iconos/escudo.png" width="100" height="100" />
+        </div>
         @Html.ActionLink("Goiztiri", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-header" id="navbarColor01">
-            <ul class="navbar-nav mr-auto ">
-                <li class="nav-item active nav-link">
-                    @Html.ActionLink("Inicio", "Index", "Home")
+            <ul class="navbar-nav mr-auto nav-tabs">
+                <li class=" active ">
+                    @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-item nav-link" })
                 </li>
-                <li class="nav-item nav-link">
-                    @Html.ActionLink("Acerca de", "About", "Home")
+                <li class="dropdown nav-item nav-link ">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plantillas</a>
+                    <div class="dropdown-menu">
+
+                        @Html.ActionLink("Femenino", "Femenino", "Jugador", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Senior A", "Femenino", "Jugador", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Senior B", "Femenino", "Jugador", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Juvenil", "Femenino", "Jugador", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Cadete", "Femenino", "Jugador", new { area = "" }, new { @class = "dropdown-item" })
+
+                    </div>
                 </li>
-                <li class="nav-item nav-link">
-                    @Html.ActionLink("Contacto", "Contact", "Home")
+                <li>
+                    @Html.ActionLink("Clasificación", "Index", "Home", new { area = "" }, new { @class = "nav-item nav-link" })
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    @Html.ActionLink("Contacto", "Index", "Home", new { area = "" }, new { @class = "nav-item nav-link" })
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -37,6 +50,7 @@
             </form>
         </div>
     </nav>
+    @*</div>*@
     <div class="container body-content">
         @RenderBody()
         <hr />
