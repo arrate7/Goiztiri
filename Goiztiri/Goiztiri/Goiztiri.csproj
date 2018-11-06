@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -148,10 +154,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JugadorController.cs" />
+    <Compile Include="Controllers\JugadoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GoiztiriFContext.cs" />
     <Compile Include="Models\Jugador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -161,6 +168,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\fotos\femenino\amaia.jpg" />
+    <Content Include="Content\img\fotos\femenino\andoni.jpg" />
+    <Content Include="Content\img\fotos\femenino\arrate.jpg" />
+    <Content Include="Content\img\fotos\femenino\eneritz.jpg" />
+    <Content Include="Content\img\fotos\femenino\gabi.jpg" />
+    <Content Include="Content\img\fotos\femenino\itzi.jpg" />
+    <Content Include="Content\img\fotos\femenino\lua.jpg" />
+    <Content Include="Content\img\fotos\femenino\yaiza.jpg" />
+    <Content Include="Content\img\fotos\femenino\ziortza.jpg" />
     <Content Include="Content\img\iconos\escudo.png" />
     <Content Include="Content\img\iconos\futsal.jpg" />
     <Content Include="Content\img\iconos\logoGoiztiri.jpg" />
@@ -199,7 +215,12 @@
     <Content Include="Views\Home\Plantillas.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Jugador\Femenino.cshtml" />
+    <Content Include="Views\Jugadores\Create.cshtml" />
+    <Content Include="Views\Jugadores\Delete.cshtml" />
+    <Content Include="Views\Jugadores\Details.cshtml" />
+    <Content Include="Views\Jugadores\Edit.cshtml" />
+    <Content Include="Views\Jugadores\Index.cshtml" />
+    <Content Include="Views\Jugadores\Femenino.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<GoiztiriWeb.Models.Jugador>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <h2 class="h2">Jugadores</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ruta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dorsal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asistencias)
+            </th>
+            <th>
+               Demarcación
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img class="rounded" height="80" width="80" src="@Url.Content(item.Ruta)" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dorsal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Goles)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Asistencias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Demarcacion)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CodJugador }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CodJugador }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CodJugador })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

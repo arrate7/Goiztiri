@@ -1,0 +1,83 @@
+﻿@model GoiztiriWeb.Models.Jugador
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jugador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ruta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ruta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dorsal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dorsal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Goles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Goles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asistencias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asistencias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demarcacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demarcacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CodJugador }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
